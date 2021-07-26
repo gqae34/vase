@@ -1,0 +1,16 @@
+name: Build Python
+on:
+  push:
+jobs:
+  Build-Python-1:
+    runs-on: windows-latest
+    timeout-minutes: 360
+    strategy:
+      matrix:
+        Plan: [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T]
+    defaults:
+     run:
+       shell: wsl-bash -u root {0}
+    steps:
+    - name: Setup
+      uses: Vampire/setup-wsl@v1
